@@ -1,1 +1,1 @@
-## **I personal AI agent would be coming soon**
+## **My personal AI agent would be coming soon**
