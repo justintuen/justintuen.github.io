@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>悠閒咖啡廳音樂</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Microsoft JhengHei', sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0,0,0,0.5);
+            background-blend-mode: overlay;
+        }
+        .container {
+            text-align: center;
+            background-color: rgba(0,0,0,0.6);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        h1 {
+            margin-bottom: 15px;
+        }
+        audio {
+            width: 100%;
+            max-width: 400px;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>悠閒咖啡廳音樂時光</h1>
+        <p>放鬆一下，享受這一刻的寧靜與美好。</p>
+        <audio controls autoplay loop>
+            <source src="your-music-file.mp3" type="audio/mp3">
+            您的瀏覽器不支援音樂播放。
+        </audio>
+    </div>
+</body>
+</html>
