@@ -35,6 +35,16 @@
             max-width: 400px;
             outline: none;
         }
+        button {
+            margin-top: 15px;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: #ff7043;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -51,7 +61,7 @@
         const audio = document.createElement('audio');
         audio.setAttribute('controls', '');
         audio.setAttribute('autoplay', '');
-        audio.setAttribute('muted', ''); 
+        audio.setAttribute('muted', '');
         audio.setAttribute('loop', '');
 
         const source = document.createElement('source');
@@ -61,14 +71,17 @@
         audio.appendChild(source);
         audio.textContent = '您的瀏覽器不支援音樂播放。';
 
-        const btn = document.createElement('button');
-        btn.textContent = '點擊開啟聲音 🎵';
-        btn.onclick = () => { audio.muted = false; };
-        container.appendChild(btn);
+        const button = document.createElement('button');
+        button.textContent = '點擊開啟聲音 🎵';
+        button.onclick = () => {
+            audio.muted = false;
+            audio.play();
+        };
 
         container.appendChild(title);
         container.appendChild(description);
         container.appendChild(audio);
+        container.appendChild(button);
 
         document.body.appendChild(container);
     </script>
