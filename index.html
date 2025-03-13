@@ -51,6 +51,7 @@
         const audio = document.createElement('audio');
         audio.setAttribute('controls', '');
         audio.setAttribute('autoplay', '');
+        audio.setAttribute('muted', ''); 
         audio.setAttribute('loop', '');
 
         const source = document.createElement('source');
@@ -59,6 +60,11 @@
 
         audio.appendChild(source);
         audio.textContent = '您的瀏覽器不支援音樂播放。';
+
+        const btn = document.createElement('button');
+        btn.textContent = '點擊開啟聲音 🎵';
+        btn.onclick = () => { audio.muted = false; };
+        container.appendChild(btn);
 
         container.appendChild(title);
         container.appendChild(description);
